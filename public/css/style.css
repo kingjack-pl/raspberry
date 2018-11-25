@@ -1,0 +1,270 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+@font-face {
+  font-family: 'aleoregular';
+  src: url('../assets/fonts/aleo/aleo-regular-webfont.woff2') format('woff2'), url('../assets/fonts/aleo/aleo-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'bakeryregular';
+  src: url('../assets/fonts/bakery/bakery-webfont.woff2') format('woff2'), url('../assets/fonts/bakery/bakery-webfont.woff') format('woff');
+  font-style: normal;
+}
+h1 {
+  font-family: "bakeryregular", sans-serif;
+  font-weight: 300;
+}
+h3,
+p,
+a,
+button,
+input {
+  font-family: "aleoregular", sans-serif;
+  letter-spacing: 1px;
+}
+h3 {
+  text-align: center;
+  font-size: 18px;
+  color: #292d2f;
+}
+.btnDefault {
+  border: 2px solid #fff;
+  background: none;
+  border-radius: 25px;
+  padding: 15px 50px;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  font-weight: bold;
+}
+.btnDefault:hover {
+  background: #a83a5e;
+  transition: all 0.3s;
+}
+.btnDefault--pink {
+  background: #a83a5e;
+  padding: 15px 0;
+  width: 100%;
+}
+.btnDefault--pink:hover {
+  background: #fff;
+  border-color: #a83a5e;
+  color: #000;
+}
+.raspberry {
+  background: url("../assets/img/bg_raspberry.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.raspberry header nav {
+  padding-top: 65px;
+}
+.raspberry header nav a {
+  color: #fff;
+  padding: 45px;
+  text-decoration: none;
+  position: relative;
+}
+.raspberry header nav a:before,
+.raspberry header nav a:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: #fff;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+.raspberry header nav a:before {
+  left: 50%;
+}
+.raspberry header nav a:after {
+  right: 50%;
+}
+.raspberry header nav a:hover:before,
+.raspberry header nav a:hover:after {
+  width: 50%;
+}
+.raspberry header nav a.logo {
+  background: url("../assets/img/logo_raspberry.png") center center no-repeat;
+  height: 55px;
+  width: 46px;
+}
+.raspberry main.home h1 {
+  color: #fff;
+  font-size: 135px;
+  margin-bottom: 30px;
+  margin-top: -30px;
+}
+.raspberry footer {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 18px 0;
+  font-size: 12px;
+}
+.raspberry footer a,
+.raspberry footer span {
+  color: #fff;
+}
+.raspberry footer a {
+  padding: 15px 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.raspberry footer p {
+  color: #fff;
+  margin: 0 80px;
+}
+.modalPortal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.modalPortal .modalPortal__modal {
+  width: 305px;
+  height: auto;
+  padding: 55px;
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 1rem;
+  position: relative;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  justify-self: center;
+}
+.modalPortal .modalPortal__modal button {
+  margin-top: 15px;
+}
+form.formSignIn .formSignIn__group {
+  position: relative;
+  padding-bottom: 15px;
+}
+form.formSignIn .formSignIn__group:last-of-type {
+  margin-bottom: 20px;
+}
+form.formSignIn .formSignIn__group input {
+  font-size: 15px;
+  padding: 10px 0;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #292d2f;
+  text-align: center;
+  margin: 0 auto;
+}
+form.formSignIn .formSignIn__group input:focus {
+  outline: none;
+}
+form.formSignIn .formSignIn__group input:focus ~ span:before,
+form.formSignIn .formSignIn__group input:focus ~ span:after {
+  width: 50%;
+}
+form.formSignIn .formSignIn__group input::placeholder {
+  color: #292d2f;
+}
+form.formSignIn .formSignIn__group span {
+  position: relative;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+form.formSignIn .formSignIn__group span:before,
+form.formSignIn .formSignIn__group span:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  position: absolute;
+  background: #a83a5e;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+form.formSignIn .formSignIn__group span:before {
+  left: 50%;
+}
+form.formSignIn .formSignIn__group span:after {
+  right: 50%;
+}
+form.formSignIn .formSignIn__group.error input {
+  border-bottom: 1px solid red;
+}
+form.formSignIn .formSignIn__group.error .errorMessage {
+  text-align: center;
+  color: red;
+  font-size: 14px;
+  display: block;
+}
+.signedMessage p {
+  text-align: center;
+}
+@media all and (min-width: 768px) and (max-width: 959px) {
+  .raspberry main.home h1 {
+    font-size: 110px;
+  }
+}
+@media all and (max-width: 768px) {
+  .raspberry {
+    height: auto;
+  }
+  .raspberry header nav {
+    padding: 30px 0 45px;
+  }
+  .raspberry header nav a {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+  }
+  .raspberry header nav a:after,
+  .raspberry header nav a:before {
+    content: none;
+  }
+  .raspberry header nav a.logo {
+    width: 100%;
+  }
+  .raspberry main.home h1 {
+    font-size: 42px;
+    margin-bottom: 30px;
+  }
+  .raspberry main.home button {
+    margin-bottom: 30px;
+  }
+  .raspberry footer {
+    display: block;
+    padding: 10px 0;
+  }
+  .raspberry footer div {
+    text-align: center;
+    padding: 5px 0;
+  }
+  .raspberry footer p {
+    margin: 0;
+    text-align: center;
+  }
+  .modalPortal .modalPortal__modal {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    padding: 15px;
+  }
+}
