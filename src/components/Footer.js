@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export default () => {
 	return (
 		<footer>
-			<p>ⓒ 2014 RASPBERRY KINGDOM</p>
+			<p>ⓒ 2018 RASPBERRY KINGDOM</p>
 			<div>
 				<Link to="/">Cookies</Link>
 				<span>|</span>

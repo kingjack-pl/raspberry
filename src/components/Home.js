@@ -5,6 +5,8 @@ import AuthSignIn from "./AuthSignIn";
 class Home extends React.Component {
     state = {showModal: false};
 
+
+
     handleShowModal = () => this.setState({showModal: true});
 
     handleCloseModal = () => this.setState({showModal: false});

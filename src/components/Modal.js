@@ -4,12 +4,28 @@ import { createPortal } from "react-dom";
 const modalRoot = document.getElementById("modal-root");
 
 class Modal extends Component {
-	render() {
+
+	componentWillMount() {
+    	document.addEventListener("click", this.handleClick, false);
+	}
+
+	componentWillUnmount() {
+    	document.addEventListener("click", this.handleClick, false);
+	}
+
+	handleClick = e => {
+		if(!this.node || this.node.contains(e.target)) {
+			return
+		}
+        this.props.onClose();
+	};
+
+    render() {
 		const { children, onClose } = this.props;
 
 		return createPortal(
 			<div className="modalPortal">
-				<div className="modalPortal__modal">
+				<div ref={node => this.node = node} className="modalPortal__modal">
 					{children}
 					<button
 						className="btnDefault btnDefault--pink"

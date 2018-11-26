@@ -65,14 +65,14 @@ class AuthSignIn extends Component {
 	}
 }
 
-const validate = (values) => {
+const validate = ({ login, password }) => {
     const errors = {};
 
-    if (!values.login) {
+    if (!login) {
         errors.login = 'Please complete login field!'
     }
 
-    if (!values.password) {
+    if (!password) {
         errors.password = 'Please complete password field!'
     }
 
