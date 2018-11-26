@@ -27,7 +27,6 @@ class AuthSignIn extends Component {
         </div>
     );
 
-
 	render() {
 		const { handleSubmit, SignOut, auth: { status, message }} = this.props;
 
