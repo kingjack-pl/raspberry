@@ -10,7 +10,7 @@ class Modal extends Component {
 	}
 
 	componentWillUnmount() {
-    	document.addEventListener("click", this.handleClick, false);
+    	document.removeEventListener("click", this.handleClick, false);
 	}
 
 	handleClick = e => {
